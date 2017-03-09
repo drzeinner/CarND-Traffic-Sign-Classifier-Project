@@ -81,62 +81,6 @@ def preprocessImages(features, labels):
 
     return processed_images, labels
 
-# Class that defines and constructs a layer in a neural network
-# Currently supports:
-# conv2d
-# relu
-# maxPool
-# fullyConnected
-#
-# class LayerDef:
-#
-    # Data contains the following
-    # layerType : string identifying what type of layer to use
-    # inTensor  : input tensor to this layer
-    # shape     : shape of the layer
-    # mean      : mean value for random variable initialization
-    # stddev    : standard deviation value for random variable initialization
-    # stride    : integer value that determines how far to stride each iteration
-    # padding   : string either 'VALID' or 'SAME'
-#     def __init__(self, layerType, inTensor, shape=None, mean=None, stddev=None, stride=None, padding=None):
-#         self.layerType = layerType
-#         self.inTensor  = inTensor
-#         self.shape     = shape
-#         self.mean      = mean
-#         self.stddev    = stddev
-#         self.stride    = stride
-#         self.padding   = padding
-#         self.layer     = self.constructLayer()
-#
-#     def constructLayer(self):
-#         constructorMethod = None
-#         try:
-#             constructorMethod = getattr(self, self.layerType)
-#         except AttributeError:
-#             raise NotImplementedError(
-#                 "Class `{}` does not implement `{}`".format(self.__class__.__name__, self.layerType))
-#         return constructorMethod()
-#
-#     # Construct the layer based its settings
-#     def conv2d(self):
-#         weights = tf.Variable(tf.truncated_normal(self.shape, mean=self.mean, stddev=self.stddev))
-#         bias = tf.Variable(tf.zeros(self.shape[3]))
-#         return tf.nn.conv2d(self.inTensor, weights, strides=[1, self.stride, self.stride, 1], padding=self.padding) + bias
-#
-#     # Construct the layer based its settings
-#     def relu(self):
-#         return tf.nn.relu(self.inTensor)
-#
-#     # Construct the layer based its settings
-#     def maxPool(self):
-#         return tf.nn.max_pool(self.inTensor, ksize=self.shape, strides=[1, self.stride, self.stride, 1], padding=self.padding)
-#
-#     # Construct the layer based its settings
-#     def fullyConnected(self):
-#         weights = tf.Variable(tf.truncated_normal(shape=self.shape, mean=self.mean, stddev=self.stddev))
-#         bias = tf.Variable(self.shape[1])
-#         return tf.matmul(self.inTensor, weights) + bias
-
 # Create a 2d convolutional layer
 #
 # inTensor  : input tensor to this layer

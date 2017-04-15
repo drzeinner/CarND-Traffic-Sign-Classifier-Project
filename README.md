@@ -1,5 +1,3 @@
-#Traffic Sign Recognition 
-
 [//]: # (Image References)
 
 [image1]: ./visualization/histogram.png "Histogram"
@@ -14,9 +12,13 @@
 
 ---
 
+# Traffic Sign Recognition
+
+---
+
 Here is a link to my [project code](https://github.com/drzeinner/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-##Data Set Summary & Exploration
+## Data Set Summary & Exploration
 
 The code for this step is contained in the second code cell of the IPython notebook.  
 
@@ -56,7 +58,7 @@ This image is save in visualizations/proc.png.
 
 Saving out these images let me see if my preprocessing had bugs and if it was improving the contrast and overall visibility of the source images.
 
-##Design and Test a Model Architecture
+## Design and Test a Model Architecture
 
 The code for this step is contained in the fourth code cell of the IPython notebook.
 
@@ -124,7 +126,7 @@ My final model results were:
 * I decided to implement both dropout and l2 regularization at the same time and tweak the numbers to find the best settings. After experimenting for a while I was able to get both my training and validation accuracies to above 96%.
  
 
-##Test a Model on New Images
+## Test a Model on New Images
 
 Here are five German traffic signs that I found on the web:
 
